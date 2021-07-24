@@ -1,8 +1,11 @@
 package page;
 
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class CarrinhoPage {
 
@@ -33,12 +36,17 @@ public class CarrinhoPage {
 	
 	public void pularRecomendacao() {
 		
-		if (driver.getPageSource().contains("Não, obrigado(a)")) {
-//			driver.navigate().refresh();	
-//			driver.findElement(By.xpath(BTN_NAO_OBRIGADO)).click();
-			driver.findElement(By.xpath(LOGO_AMAZON)).click();
+//		if (driver.getPageSource().contains("Não, obrigado(a)")) {
 			
-		}
+//			WebElement elem = driver.findElement(By.xpath("//*[@data-action='a-popover-a11y']"));
+//			String js = "arguments[0].style.height='auto'; arguments[0].style.visibility='false';";
+//
+//			((JavascriptExecutor) driver).executeScript(js, elem);			
+			driver.navigate().refresh();	
+//			driver.findElement(By.xpath(BTN_NAO_OBRIGADO)).click();
+//			driver.findElement(By.xpath(LOGO_AMAZON)).click();
+			
+//		}
 	}
 	
 
