@@ -24,7 +24,7 @@ public class ResultadoBuscaPage {
 	
 	public void validarProdutoNatela() {
 		
-		Assert.assertTrue(driver.findElement(By.xpath(PRODUTO_RESULTADO)).getText().contains("Kindle 10a"));
+		Assert.assertTrue("Erro ao validar produto", driver.findElement(By.xpath(PRODUTO_RESULTADO)).getText().contains("Kindle 10a"));
 		
 	}
 	
